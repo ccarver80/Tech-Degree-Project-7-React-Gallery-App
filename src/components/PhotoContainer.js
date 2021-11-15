@@ -17,7 +17,7 @@ class PhotoContainer extends Component {
 
         return(
       <div className="photo-container">
-      <h2>{`Photo's of ${this.props.results}`}</h2>
+      <h2>{`Photo's of jsdjf ${this.props.results}`}</h2>
       <ul>
           {this.props.jsonArray.map( location => 
           <Results 
