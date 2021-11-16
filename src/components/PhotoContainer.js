@@ -4,20 +4,12 @@ import Results from "./Results";
 
 class PhotoContainer extends Component {
 
-  componentDidMount() {
-    console.log("comp Mounted")
-  }
-
-  componentWillUnmount() {
-    console.log("Comp UNMOUNTED")
-  }
-  
 
     render(){
 
         return(
       <div className="photo-container">
-      <h2>{`Photo's of jsdjf ${this.props.results}`}</h2>
+      <h2>{`Photo's of ${this.props.results}`}</h2>
       <ul>
           {this.props.jsonArray.map( location => 
           <Results 

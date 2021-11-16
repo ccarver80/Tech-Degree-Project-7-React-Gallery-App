@@ -1,16 +1,20 @@
 import React from "react";
 import { Component } from "react";
 
+
 class SearchBar extends Component {
   search = React.createRef();
 
   handleSearch = (e) => {
     e.preventDefault();
     this.props.searchData(this.search.current.value);
+    let path = `${this.search.current.value}`
+    this.props.history.push(path)  // no "history" prop ??? 
   };
 
   render() {
     return (
+      
       <form onSubmit={this.handleSearch} className="search-form">
         <input
           type="search"
@@ -32,6 +36,7 @@ class SearchBar extends Component {
           </svg>
         </button>
       </form>
+   
     );
   }
 }

@@ -3,7 +3,7 @@ import { Component } from "react";
 import SearchBar from "./SearchBar";
 import PhotoContainer from "./PhotoContainer";
 import NavMenu from "./Nav";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route} from "react-router-dom";
 
 import APIkey from "./config";
 
@@ -36,9 +36,11 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="container">
-          <SearchBar searchData={this.searchValue} />
+          
+          <Route path="/" render={ () => <SearchBar searchData={this.searchValue} /> } />
           <NavMenu />
-          <PhotoContainer results={this.state.results} jsonArray={this.state.response} />
+          <Route path="/:results" render={ () => <PhotoContainer results={this.state.results} jsonArray={this.state.response} /> } />
+          
         </div>
       </BrowserRouter>
     );
