@@ -1,3 +1,12 @@
+# React Gallery App 
+## Project #7 Team TreeHouse Tech Degree Program. 
+
+In this project, I made a React App using "create-react-app". 
+
+My assignment was to use React to create a Photo Gallery using an API from Flickr.com
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
